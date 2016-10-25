@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_list_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.emotiona.study.listviewpage.ListViewActivity">
+    <com.emotiona.study.widget.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/background_tabs" />
+
+    <com.emotiona.study.widget.DecoratorViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/colors"
+        android:layout_below="@+id/tabs"
+        tools:context=".MainActivity" />
+</RelativeLayout>
