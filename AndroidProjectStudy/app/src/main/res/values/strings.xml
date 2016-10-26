@@ -5,4 +5,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="str_list">滑动操作列表</string>
+    <string name="str_custom_view">自定义控件学习篇</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_main">主页</string>
+    <string name="dialog_ok">确定</string>
 </resources>

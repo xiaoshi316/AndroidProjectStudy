@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.emotiona.study.displayustomview.ListCustomViewActivity;
 import com.emotiona.study.listviewpage.ListViewActivity;
 
 public class MainActivity extends AppCompatActivity
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             intent.setClass(this, ListViewActivity.class);
         } else if (id == R.id.nav_gallery) {
-
+            intent.setClass(this, ListCustomViewActivity.class);
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {

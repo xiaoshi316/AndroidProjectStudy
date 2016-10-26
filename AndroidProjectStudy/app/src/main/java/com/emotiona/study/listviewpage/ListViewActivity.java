@@ -4,35 +4,32 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.view.ViewPager;
 import android.util.TypedValue;
-import android.view.ViewGroup;
 
 import com.emotiona.study.R;
-import com.emotiona.study.widget.DecoratorViewPager;
+import com.emotiona.study.base.view.BaseActivity;
 import com.emotiona.study.widget.PagerSlidingTabStrip;
 
-public class ListViewActivity extends AppCompatActivity {
+
+public class ListViewActivity extends BaseActivity {
 
     private PagerSlidingTabStrip tabs;
-    private DecoratorViewPager pager;
+    private ViewPager pager;
     private MyPagerAdapter adapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void initView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_list_view);
-        initView();
-        initData();
+        tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+        pager = (ViewPager) findViewById(R.id.pager);
+        adapter = new MyPagerAdapter(getSupportFragmentManager());
+        setBackBar(true);
+        setTitle("滑动列表页");
     }
 
-    private void initView() {
-        tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
-        pager = (DecoratorViewPager) findViewById(R.id.pager);
-        pager.setNestedpParent((ViewGroup) pager.getParent());
-        adapter=new MyPagerAdapter(getSupportFragmentManager());
-    }
-    private void initData(){
+    @Override
+    public void initData() {
         pager.setAdapter(adapter);
         final int pageMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources()
                 .getDisplayMetrics());
@@ -40,13 +37,16 @@ public class ListViewActivity extends AppCompatActivity {
         tabs.setViewPager(pager);
     }
 
+    @Override
+    public void initListener() {
 
+    }
 
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
 
-        private final String[] TITLES = { "页面一", "页面二", "页面三", "页面四", "页面五", "页面六",
-                "页面七", "页面八" };
+        private final String[] TITLES = {"页面一", "页面二", "页面三", "页面四", "页面五", "页面六",
+                "页面七", "页面八"};
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
