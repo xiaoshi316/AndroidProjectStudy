@@ -64,6 +64,10 @@ public class CustomTextView extends View {
         });
     }
 
+    /***
+     * 随机产生数字
+     * @return
+     */
     private String randomText() {
         Random random=new Random();
         Set<Integer>set=new HashSet<>();
@@ -86,7 +90,7 @@ public class CustomTextView extends View {
         int heightSize=MeasureSpec.getSize(heightMeasureSpec);
         int width;
         int height;
-        if (widthMode==MeasureSpec.EXACTLY){
+        if (widthMode==MeasureSpec.EXACTLY){//Match_parent
             width=widthSize;
         }else {
             mPaint.setTextSize(mTextSize);
@@ -95,7 +99,7 @@ public class CustomTextView extends View {
             int desired=(int)(getPaddingLeft()+textWidth+getPaddingRight());
             width=desired;
         }
-        if (heightMode==MeasureSpec.EXACTLY){
+        if (heightMode==MeasureSpec.EXACTLY){//Match_parent
             height=heightSize;
         }else {
             mPaint.setTextSize(mTextSize);

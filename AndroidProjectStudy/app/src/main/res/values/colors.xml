@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="holo_purple">#ffaa66cc</color>
+    <color name="holo_purple2">#FF6347</color>
 </resources>
