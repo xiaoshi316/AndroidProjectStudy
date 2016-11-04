@@ -262,8 +262,8 @@ public class WaterWaveView extends View {
         canvas.drawCircle(mScreenWidth / 2, mScreenHeight / 2,
                 mScreenWidth / 4 + mRingSTROKEWidth / 2, mRingPaint);
 
-//        canvas.drawCircle(mScreenWidth / 2, mScreenHeight / 2, mScreenWidth / 4, mCirclePaint);
-		canvas.drawCircle(mScreenWidth / 2, mScreenHeight / 2,  mScreenWidth / 4 + mRingSTROKEWidth / 2, mCirclePaint);
+        canvas.drawCircle(mScreenWidth / 2, mScreenHeight / 2, mScreenWidth / 4, mCirclePaint);
+//		canvas.drawCircle(mScreenWidth / 2, mScreenHeight / 2,  mScreenWidth / 4 + mRingSTROKEWidth / 2, mCirclePaint);
         canvas.restore();
 	}
 

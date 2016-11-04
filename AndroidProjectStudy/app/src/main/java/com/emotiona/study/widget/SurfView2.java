@@ -33,7 +33,7 @@ public class SurfView2 extends SurfaceView implements SurfaceHolder.Callback {
     int waveRange;
     int highLevel;
     Canvas canvas;
-
+    private float mWaterLevel = 0.5F;// 水高(0~1)
     public SurfView2(Context context) {
         super(context);
     }
@@ -51,7 +51,7 @@ public class SurfView2 extends SurfaceView implements SurfaceHolder.Callback {
         width = getMeasuredWidth();
         height = getMeasuredHeight();
         waveRange = width;
-        rectF = new RectF(5, 5, width - 5, height - 5/2);
+        rectF = new RectF(5, 5, width - 5, height - 5);
         paint = new Paint();
         paint2 = new Paint();
         paint3 = new Paint();
@@ -67,8 +67,8 @@ public class SurfView2 extends SurfaceView implements SurfaceHolder.Callback {
         path = new Path();
         path1 = new Path();
         startTime = System.currentTimeMillis();
-        waveAmplitude = 20;
-        highLevel = (int) (height * 0.5 + waveAmplitude);
+        waveAmplitude = 35;
+        highLevel = (int) (height * 0.7 + waveAmplitude);
         surfaceHolder = this.getHolder();
         surfaceHolder.addCallback(this);
         setZOrderOnTop(true);
@@ -81,19 +81,22 @@ public class SurfView2 extends SurfaceView implements SurfaceHolder.Callback {
         public void run() {
             path.reset();
             path1.reset();
-            path.addArc(rectF, 90.0f-145.0f/2.0f , 145.0f);
-            path1.addArc(rectF, 30.0f, 120.0f);
-            w += 5;
+            path.addArc(rectF, 25.0f , 135.0f);
+            path1.addArc(rectF, 90.0f-145.0f/2.0f, 145.0f);
+            w += 20;
             if (w >= (width - 5) * 2) {
                 w = 0;
             }
-            for (int i = 5; i < width - 5; i++) {
-                path.lineTo(i, (float) (highLevel + waveAmplitude * Math.cos((float) (i + w) / (float) (width - 5) * Math.PI)));
-                path1.lineTo(i, (float) (highLevel - waveAmplitude * Math.cos((float) (i + w) / (float) (width - 5) * Math.PI)));
-            }
+//            for (int i = 25; i < width - 25; i++) {
+//                path.lineTo(i, (float) (highLevel + waveAmplitude * Math.cos((float) (i + w) / (float) (width - 25) * Math.PI)));
+//                path1.lineTo(i, (float) (highLevel - waveAmplitude * Math.cos((float) (i + w) / (float) (width - 5) * Math.PI)));
+//            }
             path.close();
             path1.close();
             Draw();
+
+
+
         }
     }
 

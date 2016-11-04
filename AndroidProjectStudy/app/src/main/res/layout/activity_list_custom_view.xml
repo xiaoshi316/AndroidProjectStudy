@@ -18,14 +18,14 @@
         app:textSize="16sp"
         app:textText="我是一个自定义控件" />
 
-    <com.emotiona.study.widget.CustomImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:image="@drawable/ic_important_devices"
-        app:imageScaleType="center"
-        app:title="我是表情"
-        app:titleColor="@color/colorPrimary"
-        app:titleSize="14sp" />
+    <com.emotiona.study.widget.CustomProgressBar
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:cyclerWidth="20dp"
+        app:firstColor="@color/colorAccent"
+        app:secondColor="@color/colorPrimary"
+        app:progress="0"
+         />
 
     <com.emotiona.study.widget.SurfView2
         android:layout_width="200dp"

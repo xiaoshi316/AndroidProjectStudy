@@ -35,4 +35,11 @@
         <attr name="blow_wave_color" format="color"/>
         <attr name="progress" format="integer"/>
     </declare-styleable>
+
+    <declare-styleable name="CustomProgressBar">
+        <attr name="firstColor" format="color"/>
+        <attr name="secondColor" format="color"/>
+        <attr name="cyclerWidth" format="dimension"/>
+        <attr name="mProgress" format="integer"/>
+    </declare-styleable>
 </resources>
