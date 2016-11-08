@@ -21,19 +21,30 @@
     <com.emotiona.study.widget.CustomProgressBar
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:visibility="gone"
         app:cyclerWidth="20dp"
         app:firstColor="@color/colorAccent"
-        app:secondColor="@color/colorPrimary"
         app:progress="0"
-         />
+        app:secondColor="@color/colorPrimary" />
 
     <com.emotiona.study.widget.SurfView2
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
 
     <com.emotiona.study.widget.WaterWaveView
         android:id="@+id/wave_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.emotiona.study.widget.CustomVolumControl
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal"
+        app:circleWidth="12dp"
+        app:splitSize="2dp"
+        app:doCount="30"
+        app:bg="@mipmap/vol_03" />
 </LinearLayout>

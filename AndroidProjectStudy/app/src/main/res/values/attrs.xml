@@ -15,31 +15,42 @@
     </declare-styleable>
     <!--自定义文本自定义属性-->
     <declare-styleable name="CustomTextView">
-        <attr name="textText" format="string"/>
-        <attr name="textColor" format="color"/>
-        <attr name="textSize" format="dimension"/>
+        <attr name="textText" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
     </declare-styleable>
     <!--自定义图片属性-->
     <declare-styleable name="CustomImageView">
-        <attr name="title" format="string"/>
-        <attr name="titleColor" format="color"/>
-        <attr name="titleSize" format="dimension"/>
-        <attr name="image" format="reference"/>
+        <attr name="title" format="string" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="image" format="reference" />
         <attr name="imageScaleType" format="enum">
-            <enum name="center" value="0"/>
-            <enum name="fill" value="1"/>
+            <enum name="center" value="0" />
+            <enum name="fill" value="1" />
         </attr>
     </declare-styleable>
+    <!--自定义波浪控件的属性-->
     <declare-styleable name="WaveView">
-        <attr name="above_wave_color" format="color"/>
-        <attr name="blow_wave_color" format="color"/>
-        <attr name="progress" format="integer"/>
+        <attr name="above_wave_color" format="color" />
+        <attr name="blow_wave_color" format="color" />
+        <attr name="progress" format="integer" />
+    </declare-styleable>
+    <!--自定义圆形进度条属性-->
+    <declare-styleable name="CustomProgressBar">
+        <attr name="firstColor" format="color" />
+        <attr name="secondColor" format="color" />
+        <attr name="cyclerWidth" format="dimension" />
+        <attr name="mProgress" format="integer" />
+    </declare-styleable>
+    <!--自定义音量控件的属性-->
+    <declare-styleable name="CustomVolumControl">
+        <attr name="oneColor" format="color" />
+        <attr name="twoColor" format="color" />
+        <attr name="circleWidth" format="dimension" />
+        <attr name="splitSize" format="dimension" />
+        <attr name="doCount" format="integer" />
+        <attr name="bg" format="reference" />
     </declare-styleable>
 
-    <declare-styleable name="CustomProgressBar">
-        <attr name="firstColor" format="color"/>
-        <attr name="secondColor" format="color"/>
-        <attr name="cyclerWidth" format="dimension"/>
-        <attr name="mProgress" format="integer"/>
-    </declare-styleable>
 </resources>
