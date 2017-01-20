@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/id_card_bg">
+
+        <FrameLayout
+            android:id="@+id/id_card_water_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/id_card_water_font">
+        </FrameLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/take_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/id_card_camera_btn"
+        >
+    </Button>
+</RelativeLayout>

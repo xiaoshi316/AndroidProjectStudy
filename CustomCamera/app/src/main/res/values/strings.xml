@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CustomCamera</string>
+    <color name="test" >#0000ff</color>
+</resources>
